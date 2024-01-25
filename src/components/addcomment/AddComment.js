@@ -18,14 +18,15 @@ export async function AddComment({params}) {
     await sql`INSERT INTO comments (name, comment, article_id) VALUES (${name}, ${comment}, ${params.id})`;
 
     // revalidate the path so the new item shows
-    revalidatePath("/");
+    revalidatePath(`/articles/${params.id}`);
 
     // take me to the home page
-    redirect("/");
+    redirect(`/articles/${params.id}`);
   }
 
   return (
     <div>
+      <h3>Add Comment</h3>
       <form action={handleAddComment}>
         <label htmlFor="name">Your Name</label>
         <input name="name" id="name" placeholder="Name" />
