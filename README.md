@@ -1,36 +1,17 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Website for the Order of Tea!
 
-## Getting Started
+Project made for tech-educators week 8. Built using Next JS. 
 
-First, run the development server:
+## Project Week 8 
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+### Build a comment form
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+You've built a simple blog, your task now is to embellish it. Use database relationships to add a comments table. Add categories and tags to your posts. Add a form to create new comments. Add an edit page that populates the form with the post data and allows you save changes to the database.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+You can use Vercel Postgres or Supabase, so long as Postgres is the database.
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+#### User Stories
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+🐿️ As a user, I want to browse a list of posts, sortable by ascending or descending order
+🐿️ As a user, I want to see a list of categories, and click on a category to see a list of posts in that category
+🐿️ As a user, I want to be able to leave a comment sharing my thoughts on each post
