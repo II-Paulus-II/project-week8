@@ -1,18 +1,16 @@
 /* ----- Third Party Imports ----- */
+import Link from "next/link";
 import { sql } from "@vercel/postgres";
 
-export default async function Home() {
-  const test = await sql`
-  SELECT * FROM test;
-`;
+export async function Home() {
+
   return (
     <>
-    <h1>Posts</h1>
-      <ul>
-        {test.rows.map((item) => (
-          <li key={item.id}>{item.content}</li>
-        ))}
-      </ul>
+    <h1>Welcome to the Order of Tea</h1>
+    <p>Soon to be home page here!</p>
+    <Link href="/articles">Articles</Link>
     </>
   );
 }
+
+export default Home;
