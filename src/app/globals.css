@@ -1,1 +1,7 @@
-
+body {
+  background-color: tomato;
+  font-family: monospace;
+  color: #333;
+  max-width: 1280px;
+  margin: 0 auto;
+}
