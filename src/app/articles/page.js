@@ -6,11 +6,17 @@ import { sql } from "@vercel/postgres";
 import "./articles.css";
 
 export async function ArticlesPage() {
+  const articles = await sql`SELECT * FROM articles`
   return (
     <div>
       <h2>Articles</h2>
       <div>
-        <p>Soon to be some information here.</p>
+        {articles.rows.map((article) => { return (
+          <div key={article.id}>
+            <Link href={`/articles/${article.id}`}><h3 key={article.title}>{article.title}</h3></Link>
+          </div>
+        )
+        })}
       </div>
     </div>
   );
