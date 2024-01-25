@@ -32,3 +32,10 @@ CREATE TABLE articles (
 INSERT INTO categories (name) VALUES ('Order of Tea'),('Order Ranks'),('Advice'),('Brands');
 
 INSERT INTO articles (title, content, category_id) VALUES ('About the Order', 'The miilitary order of TEA was founded by Paulus in the year 1657AD and has grown exponentially since then. Paulus owes his unnaturally long life to his constant consumption of tea and welcomes all tea drinkers to be members of the order.', 1);
+
+CREATE TABLE comments (
+  id SERIAL PRIMARY KEY,
+  name VARCHAR(255) NOT NULL,
+  comment TEXT NOT NULL,
+  article_id INTEGER NOT NULL REFERENCES articles(id)
+)
