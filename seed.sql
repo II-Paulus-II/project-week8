@@ -38,4 +38,8 @@ CREATE TABLE comments (
   name VARCHAR(255) NOT NULL,
   comment TEXT NOT NULL,
   article_id INTEGER NOT NULL REFERENCES articles(id)
-)
+);
+
+ALTER TABLE categories RENAME TO pw8_categories;
+ALTER TABLE articles RENAME TO pw8_articles;
+ALTER TABLE comments RENAME TO pw8_comments;

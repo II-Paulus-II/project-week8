@@ -5,7 +5,7 @@ import { sql } from "@vercel/postgres";
 import "./getcomments.css";
 
 export async function GetComments({params}) {
-  const comments = await sql`SELECT comments.id, comments.name, comments.comment FROM comments WHERE article_id=${params.id}`;
+  const comments = await sql`SELECT pw8_comments.id, pw8_comments.name, pw8_comments.comment FROM pw8_comments WHERE article_id=${params.id}`;
 
   return (
     <div>

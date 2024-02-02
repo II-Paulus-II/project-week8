@@ -15,7 +15,7 @@ export async function AddComment({params}) {
     const name = formData.get("name");
     const comment = formData.get("comment");
 
-    await sql`INSERT INTO comments (name, comment, article_id) VALUES (${name}, ${comment}, ${params.id})`;
+    await sql`INSERT INTO pw8_comments (name, comment, article_id) VALUES (${name}, ${comment}, ${params.id})`;
 
     // revalidate the path so the new item shows
     revalidatePath(`/articles/${params.id}`);

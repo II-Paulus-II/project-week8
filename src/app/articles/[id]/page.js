@@ -7,7 +7,7 @@ import AddComment from "@/components/addcomment/AddComment";
 import GetComments from "@/components/getcomments/GetComments";
 
 export async function SolitaryArticlePage({params}) {
-  const article = await sql`SELECT articles.title, articles.content, categories.name as category FROM articles JOIN categories ON articles.category_id = categories.id WHERE articles.id=${params.id}`;
+  const article = await sql`SELECT pw8_articles.title, pw8_articles.content, pw8_categories.name as category FROM pw8_articles JOIN pw8_categories ON pw8_articles.category_id = pw8_categories.id WHERE pw8_articles.id=${params.id}`;
 
   return (
     <>

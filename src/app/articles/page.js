@@ -6,7 +6,7 @@ import { sql } from "@vercel/postgres";
 import "./articles.css";
 
 export async function ArticlesPage() {
-  const articles = await sql`SELECT * FROM articles`
+  const articles = await sql`SELECT * FROM pw8_articles`
   return (
     <div>
       <h2>Articles</h2>
